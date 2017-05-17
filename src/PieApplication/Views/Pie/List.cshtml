@@ -3,9 +3,5 @@
     <h1>@Model.CurrentCategory</h1>
     @foreach (var pie in Model.Pies)
     {
-        <div>
-            <h2>@pie.Name</h2>
-            <h3>@pie.Price.ToString("c")</h3>
-            @*<h4>@pie.Catagory.CatagoryName</h4>*@
-        </div>
+        @Html.Partial("PieListPartialView", pie);
     }
